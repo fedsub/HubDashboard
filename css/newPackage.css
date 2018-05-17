@@ -1,0 +1,27 @@
+.title{
+  text-align: center;
+  color: #ff6680;
+    font-weight: bold;
+    src: url("style/Futura Bold.otf") format("opentype");
+
+}
+
+body{
+  background-color: white ;
+}
+.container{
+  background-color: lightblue;
+
+}
+
+
+.btn waves-effect waves-light{
+  text-align: center;
+
+
+
+}
+
+nav{
+  width: 100%;
+}
