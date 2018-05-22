@@ -9,8 +9,3 @@ function myMap() {
 	};
 	var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
-
-window.addEventListener("load", () => {
-	myMap();
-	console.log("MOEDER");
-});

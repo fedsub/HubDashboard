@@ -5,11 +5,16 @@ concat = require('gulp-concat');
 gutil = require('gulp-util');
 browserSync = require('browser-sync').create();
 
-gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () {
+gulp.task('watch', ['browserSync', 'copyHtml', 'sass', 'scripts'], function () {
 	gulp.watch('app/scss/**/*.scss', ['sass']);
 	gulp.watch('app/*.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 });
+
+gulp.task('copyHtml', function() {
+	gulp.src('app/*.html')
+	.pipe(gulp.dest('dist'))
+})
 
 gulp.task('sass', function () {
 	return gulp.src('app/scss/**/*.scss')
