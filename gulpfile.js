@@ -1,15 +1,11 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var useref = require('gulp-useref');
-var uglify = require('gulp-uglify');
-var gulpIf = require('gulp-if');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+sass = require('gulp-sass');
+uglify = require('gulp-uglify');
+concat = require('gulp-concat');
+gutil = require('gulp-util');
+browserSync = require('browser-sync').create();
 
-gulp.task('hello', function () {
-	console.log('Hello Milan');
-});
-
-gulp.task('watch', ['browserSync', 'sass'], function () {
+gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () {
 	gulp.watch('app/scss/**/*.scss', ['sass']);
 	gulp.watch('app/*.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
@@ -24,19 +20,14 @@ gulp.task('sass', function () {
 		}))
 });
 
-gulp.task('useref', function () {   
-	return gulp.src('dist/*.html')
-		.pipe(useref())
-		.pipe(gulp.dest('dist'))
+gulp.task('scripts', function () {
+	gulp.src('app/js/*.js')
+		.pipe(concat('main.min.js'))
+		.pipe(uglify())
+		.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+		.pipe(gulp.dest('dist/js'))
 });
 
-gulp.task('useref', function(){
-  return gulp.src('dist/*.html')
-    .pipe(useref())
-    // Minifies only if it's a JavaScript file
-    .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulp.dest('dist'))
-});
 
 gulp.task('browserSync', function () {
 	browserSync.init({
