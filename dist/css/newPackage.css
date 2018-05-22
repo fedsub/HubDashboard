@@ -5,7 +5,11 @@
   src: url("style/Futura Bold.otf") format("opentype"); }
 
 body {
-  background-color: white; }
+  background-color: white;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
 .container {
   background-color: lightblue; }
@@ -15,3 +19,7 @@ body {
 
 nav {
   width: 100%; }
+
+main {
+  flex: 1 0 auto;
+}
