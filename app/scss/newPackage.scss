@@ -1,21 +1,26 @@
-.title{
+.title {
   text-align: center;
   color: #ff6680;
-    font-weight: bold;
-    src: url("style/Futura Bold.otf") format("opentype");
+  font-weight: bold;
+  src: url("style/Futura Bold.otf") format("opentype");
 }
 
-body{
-  background-color: white ;
-}
-.container{
-  background-color: lightblue;
+body {
+  background-color: white;
 }
 
-.btn waves-effect waves-light{
+.btn waves-effect waves-light {
   text-align: center;
 }
 
-nav{
+nav {
   width: 100%;
+}
+
+.nav-wrapper {
+  background-color: #5e35b1;
+}
+
+.page-footer {
+  background-color: #5e35b1;
 }
