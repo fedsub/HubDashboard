@@ -1,12 +1,15 @@
 .title {
   text-align: center;
-  color: #ff6680;
+  color: #000000;
   font-weight: bold;
   src: url("style/Futura Bold.otf") format("opentype");
 }
 
 body {
   background-color: white;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .btn waves-effect waves-light {
@@ -15,6 +18,10 @@ body {
 
 nav {
   width: 100%;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .nav-wrapper {
