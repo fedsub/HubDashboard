@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 sass = require('gulp-sass');
-uglify = require('gulp-uglify');
+uglify = require('gulp-uglify-es').default;
 concat = require('gulp-concat');
 gutil = require('gulp-util');
 browserSync = require('browser-sync').create();
@@ -8,7 +8,7 @@ browserSync = require('browser-sync').create();
 gulp.task('watch', ['browserSync', 'copyHtml', 'sass', 'scripts'], function () {
 	gulp.watch('app/scss/**/*.scss', ['sass']);
 	gulp.watch('app/*.html', browserSync.reload);
-	gulp.watch('app/js/**/*.js', browserSync.reload);
+	gulp.watch('app/js/*.js', ['scripts']);
 });
 
 gulp.task('copyHtml', function() {
@@ -30,6 +30,9 @@ gulp.task('scripts', function () {
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
 		.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+		.pipe(browserSync.reload({
+			stream: true
+		}))
 		.pipe(gulp.dest('dist/js'))
 });
 

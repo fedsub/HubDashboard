@@ -1,6 +1,4 @@
-$(document).ready(function(){
-	$(".dropdown-trigger").dropdown();
-	console.log("Je moeder");
-})
-
-
+// $(document).ready(function(){
+// 	$(".dropdown-trigger").dropdown();
+// 	console.log("Test");
+// })
