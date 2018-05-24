@@ -73,35 +73,34 @@ let fetchData = {
 // 		console.log(data);
 // 	});
 
-
+function postProblem() {
 	fetch("https://graphhopper.com/api/1/vrp/optimize?key=335e9813-ae2a-438b-9eb4-a445763ac30e", {
-		body: data,
-		headers: {
-			"Content-Type": "application/json"
-		},
-		method: "POST"
-	})
+	body: data,
+	headers: {
+		"Content-Type": "application/json",
+		"Accept": "application/json; charset=utf-8"
+	},
+	method: "POST"
+})
 	.then((resp) => resp.json())
 	.then(function (data) {
 		console.log(data);
 	})
+	.catch((error) => console.log(error))
+}
 
-	console.log("test")
+postProblem();
+
 
 let JOB_ID = "7863454b-3f58-4953-8219-585ada2180bc";
 
-//GET
-fetch("https://graphhopper.com/api/1/vrp/solution/" + JOB_ID + "?key=" + API_KEY)
-function getJob() {
+function getSolution() {
+	fetch("https://graphhopper.com/api/1/vrp/solution/" + JOB_ID + "?key=" + API_KEY)
+		.then((resp) => resp.json()) // Transform the data into json
+		.then(function (data) {
+			console.log(data);
+		})
+		.catch((error) => console.error(error))
+}
 
-
-fetch("https://graphhopper.com/api/1/vrp/solution/" +  JOB_ID + "?key=" + API_KEY)
-	.then((resp) => resp.json()) // Transform the data into json
-	.then(function (data) {
-		console.log(data);
-	})
-	.catch(error => console.error(error))
-
-	}
-
-	document.getElementById("getJobButton").addEventListener("click", getJob);
+document.getElementById("getJobButton").addEventListener("click", getSolution);
