@@ -66,17 +66,32 @@ let fetchData = {
 }
 
 //POST
-fetch(url, fetchData)
+// fetch(url, fetchData)
+// 	.then((resp) => resp.json())
+// 	.then(function (data) {
+// 		// Handle response you get from the server
+// 		console.log(data);
+// 	});
+
+
+	fetch("https://graphhopper.com/api/1/vrp/optimize?key=335e9813-ae2a-438b-9eb4-a445763ac30e", {
+		body: data,
+		headers: {
+			"Content-Type": "application/json"
+		},
+		method: "POST"
+	})
 	.then((resp) => resp.json())
 	.then(function (data) {
-		// Handle response you get from the server
 		console.log(data);
-	});
+	})
 
-let JOB_ID = "fc32867f-ce6c-4789-a3c9-8413da084f48";
+	console.log("test")
+
+let JOB_ID = "7863454b-3f58-4953-8219-585ada2180bc";
 
 //GET
-fetch("https://graphhopper.com/api/1/vrp/solution/" +  JOB_ID + "?key=" + API_KEY)
+fetch("https://graphhopper.com/api/1/vrp/solution/" + JOB_ID + "?key=" + API_KEY)
 	.then((resp) => resp.json()) // Transform the data into json
 	.then(function (data) {
 		console.log(data);
