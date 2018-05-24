@@ -76,9 +76,16 @@ fetch(url, fetchData)
 let JOB_ID = "fc32867f-ce6c-4789-a3c9-8413da084f48";
 
 //GET
+function getJob() {
+
+
 fetch("https://graphhopper.com/api/1/vrp/solution/" +  JOB_ID + "?key=" + API_KEY)
 	.then((resp) => resp.json()) // Transform the data into json
 	.then(function (data) {
 		console.log(data);
 	})
 	.catch(error => console.error(error))
+
+	}
+
+	document.getElementById("getJobButton").addEventListener("click", getJob);
