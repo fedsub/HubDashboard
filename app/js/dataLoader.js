@@ -55,6 +55,8 @@ let data = {
 		}
 	]
 }
+
+var dataGraph;
 // The parameters we are gonna pass to the fetch function
 let fetchData = {
 	method: 'POST',
@@ -73,7 +75,7 @@ fetch(url, fetchData)
 		console.log(data);
 	});
 
-let JOB_ID = "fc32867f-ce6c-4789-a3c9-8413da084f48";
+let JOB_ID = "7863454b-3f58-4953-8219-585ada2180bc";
 
 //GET
 function getJob() {
@@ -83,6 +85,9 @@ fetch("https://graphhopper.com/api/1/vrp/solution/" +  JOB_ID + "?key=" + API_KE
 	.then((resp) => resp.json()) // Transform the data into json
 	.then(function (data) {
 		console.log(data);
+	 dataGraph = data;
+
+
 	})
 	.catch(error => console.error(error))
 
