@@ -55,6 +55,8 @@ let data = {
 		}
 	]
 }
+
+var dataGraph;
 // The parameters we are gonna pass to the fetch function
 let fetchData = {
 	method: 'POST',
