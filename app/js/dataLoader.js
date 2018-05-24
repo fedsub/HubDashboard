@@ -55,6 +55,8 @@ let data = {
 		}
 	]
 }
+
+var dataGraph;
 // The parameters we are gonna pass to the fetch function
 let fetchData = {
 	method: 'POST',
@@ -99,6 +101,9 @@ fetch("https://graphhopper.com/api/1/vrp/solution/" +  JOB_ID + "?key=" + API_KE
 	.then((resp) => resp.json()) // Transform the data into json
 	.then(function (data) {
 		console.log(data);
+	 dataGraph = data;
+
+
 	})
 	.catch(error => console.error(error))
 
