@@ -1,5 +1,5 @@
 
-// GET the district number and closest subway stop to packageZip
+// GET the packages from API
 let dataAddress;
 
     fetch("http://167.99.222.47:8000/api/shipments")
