@@ -1,7 +1,7 @@
 // require('dotenv').config();
 
 // const API_KEY = process.env.GRAPHHOPPER_API_KEY;
-const API_KEY = "276cd647-0bdb-4ad0-897f-4b3e9ed317fc";
+const API_KEY = "5a4f6201-53d3-419c-920f-7970a6c183e9";
 url = "https://graphhopper.com/api/1/vrp/optimize?key=" + API_KEY;
 
 // The data we are going to send in our request
@@ -76,7 +76,7 @@ let fetchData = {
 // 	});
 
 function postProblem() {
-	fetch("https://graphhopper.com/api/1/vrp/optimize?key=335e9813-ae2a-438b-9eb4-a445763ac30e", {
+	fetch("https://graphhopper.com/api/1/vrp/optimize?key=5a4f6201-53d3-419c-920f-7970a6c183e9", {
 	body: data,
 	headers: {
 		"Content-Type": "application/json",
@@ -94,7 +94,7 @@ function postProblem() {
 postProblem();
 
 
-let JOB_ID = "7863454b-3f58-4953-8219-585ada2180bc";
+let JOB_ID = "86c1c58b-5104-47e6-b43c-899d4f2e7c77";
 
 function getSolution() {
 	fetch("https://graphhopper.com/api/1/vrp/solution/" + JOB_ID + "?key=" + API_KEY)

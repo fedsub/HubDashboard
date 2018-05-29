@@ -36,24 +36,28 @@
     <div class="row">
         <form onsubmit="return doSomething();" class="col s12">
             <div class="row">
-                <div class="input-field col s12 m12 l12">
-                    <input id="full_name" type="text" class="validate">
-                    <label for="full_name">Volledige naam</label>
+                <div class="input-field col s8 m8 l8">
+                    <input required id="fullname" type="text" class="validate">
+                    <label for="fullname">Volledige naam</label>
+                </div>
+                <div class="input-field col s4 m4 l4">
+                    <input required id="phone" type="number" class="validate">
+                    <label for="phone">Telefoonnummer</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12 m12 l12">
-                    <input id="street" type="text" class="validate">
-                    <label for="street">Straatnaam, huisnummer + eventuele toevoeging</label>
+                    <input required id="address" type="text" class="validate">
+                    <label for="address">Straatnaam, huisnummer + eventuele toevoeging</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s4 m4 l4">
-                    <input id="postalCode" type="text" class="validate">
-                    <label for="postalCode">Postcode</label>
+                    <input required id="zipcode" type="text" class="validate">
+                    <label for="zipcode">Postcode</label>
                 </div>
                 <div class="input-field col s8 m8 l8">
-                    <input id="city" type="text" class="validate">
+                    <input required id="city" type="text" class="validate">
                     <label for="city">Stad</label>
                 </div>
             </div>
