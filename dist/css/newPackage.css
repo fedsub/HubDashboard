@@ -24,7 +24,7 @@ body {
 main {
   flex: 1 0 auto; }
 
-.nav-wrapper {
+nav {
   background-color: #5e35b1; }
 
 .page-footer {
