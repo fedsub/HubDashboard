@@ -72,7 +72,6 @@ let fetchData = {
 // 	});
 
 function postProblem() {
-<<<<<<< HEAD
 	fetch("https://graphhopper.com/api/1/vrp/optimize?key=5a4f6201-53d3-419c-920f-7970a6c183e9", {
 	body: data,
 	headers: {
@@ -86,33 +85,15 @@ function postProblem() {
 		console.log(data);
 	})
 	.catch((error) => console.log(error))
-=======
-  fetch("https://graphhopper.com/api/1/vrp/optimize?key=335e9813-ae2a-438b-9eb4-a445763ac30e", {
-      body: data,
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json; charset=utf-8"
-      },
-      method: "POST"
-    })
-    .then((resp) => resp.json())
-    .then(function(data) {
-      console.log(data);
-    })
-    .catch((error) => console.log(error))
->>>>>>> 33347fef24ca522f59c478983c4561988029fc3e
 }
 
 postProblem();
 
 
 let JOB_ID = "86c1c58b-5104-47e6-b43c-899d4f2e7c77";
-<<<<<<< HEAD
-=======
 
-var dataGraph;
+let dataGraph;
 
->>>>>>> 33347fef24ca522f59c478983c4561988029fc3e
 
 function getSolution() {
   fetch("https://graphhopper.com/api/1/vrp/solution/" + JOB_ID + "?key=" + API_KEY)
