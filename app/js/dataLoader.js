@@ -88,8 +88,19 @@ function postProblem() {
 }
 
 postProblem();
+let JOB_ID = "";
 
-let JOB_ID = "86c1c58b-5104-47e6-b43c-899d4f2e7c77";
+
+function getJobID() {
+	fetch("http://milansosef.nl/post.php")
+		.then((resp) => resp.json()) // Transform the data into json
+		.then(function (data) {
+			console.log(data);
+			JOB_ID = data;
+
+		})
+		.catch((error) => console.error(error))
+}
 
 let dataGraph;
 
@@ -103,10 +114,9 @@ function getSolution() {
 
     })
     .catch((error) => console.error(error))
+    var mapslink = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyB6I4m0PabqJB2oAEJoatzYbNpnsUFhJsY&origin=Blaak&destination=Blaak&waypoints="+dataAddress[dataAddress.length-1].address+"|"+dataAddress[dataAddress.length-2].address+"|"+dataAddress[dataAddress.length-3].address +"|"+dataAddress[dataAddress.length-4].address +"|"+dataAddress[dataAddress.length-5].address +"|"+dataAddress[dataAddress.length-6].address +"&mode=bicycling"
+      const mapsFrame = document.querySelector('iframe');
+      mapsFrame.setAttribute('src', mapslink)
 }
 
 document.getElementById("getJobButton").addEventListener("click", getSolution);
-
-var mapslink = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyB6I4m0PabqJB2oAEJoatzYbNpnsUFhJsY&origin=Oslo+Norway&destination=Telemark+Norway"
-  const mapsFrame = document.querySelector('iframe');
-  mapsFrame.setAttribute('src', mapslink)
