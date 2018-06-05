@@ -11,24 +11,27 @@
 </head>
 <body>
 <!--navigation bar-->
-<nav>
-    <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo left"><img src="./images/fedexmetrologo.png" alt=""
-                                                          style="height: 12%; width: 12%"></a>
-        <ul class="right hide-on-med-and-down">
-            <li class="active"><a href="newPackage.html"><i class="material-icons">add_circle</i></a></li>
-            <li><a href="koeriers.html"><i class="material-icons">face</i></a></li>
-            <li><a href="settings.html"><i class="material-icons">settings</i></a></li>
-            <li>
-                <a href="http://info.studielink.nl/redactie/Documents/160331%20Stappenplan%20-%20Verzoek%20tot%20uitschrijven.pdf"></i>
-                    Geluk in het leven</i></a></li>
-        </ul>
-    </div>
-</nav>
+    <nav>
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo"><img src="./images/fedexmetrologo.png"></a>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons left">menu</i></a>                                                  
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="newPackage.html"><i class="material-icons">add_circle</i></a></li>
+                <li><a href="koeriers.html"><i class="material-icons">face</i></a></li>
+                <li><a href="settings.html"><i class="material-icons">settings</i></a></li>
+                <li><a href="packagelist.html">packagelist</a></li>
+            </ul>
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="newPackage.html"><i class="material-icons">add_circle</i></a></li>
+                <li><a href="koeriers.html"><i class="material-icons">face</i></a></li>
+                <li><a href="settings.html"><i class="material-icons">settings</i></a></li>
+            </ul>        
+        </div>
+    </nav>
 
 <!--Title-->
 <div class="title">
-    <h1>FedExSubway</h1>
+    <h1>Add a Package</h1>
 </div>
 
 <!--Package form -->
@@ -36,24 +39,28 @@
     <div class="row">
         <form onsubmit="return doSomething();" class="col s12">
             <div class="row">
-                <div class="input-field col s12 m12 l12">
-                    <input id="full_name" type="text" class="validate">
-                    <label for="full_name">Volledige naam</label>
+                <div class="input-field col s8 m8 l8">
+                    <input required id="fullname" type="text" class="validate">
+                    <label for="fullname">Volledige naam</label>
+                </div>
+                <div class="input-field col s4 m4 l4">
+                    <input required id="phone" type="number" class="validate">
+                    <label for="phone">Telefoonnummer</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12 m12 l12">
-                    <input id="street" type="text" class="validate">
-                    <label for="street">Straatnaam, huisnummer + eventuele toevoeging</label>
+                    <input required id="address" type="text" class="validate">
+                    <label for="address">Straatnaam, huisnummer + eventuele toevoeging</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s4 m4 l4">
-                    <input id="postalCode" type="text" class="validate">
-                    <label for="postalCode">Postcode</label>
+                    <input required id="zipcode" type="text" class="validate">
+                    <label for="zipcode">Postcode</label>
                 </div>
                 <div class="input-field col s8 m8 l8">
-                    <input id="city" type="text" class="validate">
+                    <input required id="city" type="text" class="validate">
                     <label for="city">Stad</label>
                 </div>
             </div>
@@ -83,17 +90,15 @@ ladidadi da schlob on my knob!!!!
                 <h5 class="white-text">Links</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>                    
                 </ul>
             </div>
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            © 2018 Copyright Team Milan
+            <a class="grey-text text-lighten-4 right" href="index.html">FedEx</a>
         </div>
     </div>
 </footer>
