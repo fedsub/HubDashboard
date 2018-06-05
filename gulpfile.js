@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-browserify = require('gulp-browserify');
 sass = require('gulp-sass');
 uglify = require('gulp-uglify-es').default;
 concat = require('gulp-concat');
@@ -12,9 +11,9 @@ gulp.task('watch', ['browserSync', 'copyHtml', 'sass', 'scripts'], function () {
 	gulp.watch('app/js/*.js', ['scripts']);
 });
 
-gulp.task('copyHtml', function () {
+gulp.task('copyHtml', function() {
 	gulp.src('app/*.html')
-		.pipe(gulp.dest('dist'))
+	.pipe(gulp.dest('dist'))
 })
 
 gulp.task('sass', function () {
@@ -28,10 +27,6 @@ gulp.task('sass', function () {
 
 gulp.task('scripts', function () {
 	gulp.src('app/js/*.js')
-		.pipe(browserify({
-			insertGlobals: true,
-			debug: !gulp.env.production
-		}))
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
 		.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })

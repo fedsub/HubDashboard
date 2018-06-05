@@ -9,4 +9,5 @@ fetch("https://bridge.buddyweb.fr/api/metrohubs/metrohaltes/" + packageZip)
     console.log(data);
     dataHub = data;
   })
+  
   .catch(error => console.error(error))
