@@ -46,7 +46,6 @@ fetch("http://167.99.222.47:8000/api/shipments")
             button.addEventListener('click', function () {
                 deleteData(id)
             });
-
         }
 
 

@@ -89,7 +89,6 @@ function postProblem() {
 
 postProblem();
 
-
 let JOB_ID = "86c1c58b-5104-47e6-b43c-899d4f2e7c77";
 
 let dataGraph;
