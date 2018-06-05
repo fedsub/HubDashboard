@@ -19,7 +19,6 @@
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
-    "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.1",
     "gulp-uglify-es": "^1.0.4",
@@ -29,7 +28,6 @@
     "@google/maps": "^0.4.6",
     "dotenv": "^5.0.1",
     "jquery": "^3.3.1",
-    "materialize-css": "^1.0.0-rc.1",
-    "requirejs": "^2.3.5"
+    "materialize-css": "^1.0.0-rc.1"
   }
 }
