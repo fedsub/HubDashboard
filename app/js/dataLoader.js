@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 // const API_KEY = process.env.GRAPHHOPPER_API_KEY;
-const API_KEY = "276cd647-0bdb-4ad0-897f-4b3e9ed317fc";
+const API_KEY = "5a4f6201-53d3-419c-920f-7970a6c183e9";
 url = "https://graphhopper.com/api/1/vrp/optimize?key=" + API_KEY;
 
 // The data we are going to send in our request
@@ -56,15 +56,14 @@ let data = {
   ]
 }
 
-var dataGraph;
 // The parameters we are gonna pass to the fetch function
 let fetchData = {
-	method: 'POST',
-	body: data,
-	headers: new Headers({
-		'Content-Type': 'application/json',
-		// 'Accept': 'application/json'
-	})
+  method: 'POST',
+  body: data,
+  headers: new Headers({
+    'Content-Type': 'application/json',
+    // 'Accept': 'application/json'
+  })
 }
 
 //POST
@@ -135,3 +134,7 @@ function getSolution() {
 // }
 
 document.getElementById("getJobButton").addEventListener("click", getSolution);
+
+var mapslink = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyB6I4m0PabqJB2oAEJoatzYbNpnsUFhJsY&origin=Oslo+Norway&destination=Telemark+Norway"
+  const mapsFrame = document.querySelector('iframe');
+  mapsFrame.setAttribute('src', mapslink)
