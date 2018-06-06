@@ -18,5 +18,7 @@ function doSomething() {
 		"phone": phone.value
 	});
 	xhr.send(data);
+	alert("The package has been added, the route is optimized")
+	location.reload();
 	return false;
 }

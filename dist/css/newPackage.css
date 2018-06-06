@@ -33,5 +33,5 @@ th {
   cursor: pointer; }
 
 #listScroll {
-  height: 50em;
+  height: 20em;
   overflow: scroll; }

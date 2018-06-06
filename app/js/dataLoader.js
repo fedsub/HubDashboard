@@ -118,9 +118,7 @@ async function checkResponse(JOB_ID) {
 	// 	return dataGraph
 	// }
 
-	let mapslink = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyB6I4m0PabqJB2oAEJoatzYbNpnsUFhJsY&origin=Blaak&destination=Blaak&waypoints=" + dataAddress[dataAddress.length - 1].address + "|" + dataAddress[dataAddress.length - 2].address + "|" + dataAddress[dataAddress.length - 3].address + "|" + dataAddress[dataAddress.length - 4].address + "|" + dataAddress[dataAddress.length - 5].address + "|" + dataAddress[dataAddress.length - 6].address + "&mode=bicycling"
-	const mapsFrame = document.querySelector('iframe');
-	mapsFrame.setAttribute('src', mapslink)
+	
 }
 
 let button = document.getElementById("getJobButton")
@@ -128,3 +126,8 @@ if(button){
 	button.addEventListener("click", getSolution);
 }
 
+function showMap(){
+	let mapslink = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyB6I4m0PabqJB2oAEJoatzYbNpnsUFhJsY&origin=Blaak&destination=Blaak&waypoints=" + dataAddress[dataAddress.length - 1].address + "|" + dataAddress[dataAddress.length - 2].address + "|" + dataAddress[dataAddress.length - 3].address + "|" + dataAddress[dataAddress.length - 4].address + "&mode=bicycling"
+	const mapsFrame = document.querySelector('iframe');
+	mapsFrame.setAttribute('src', mapslink)
+}

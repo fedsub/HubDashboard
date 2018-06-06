@@ -52,7 +52,7 @@ fetch("http://167.99.222.47:8000/api/shipments")
 				cell7.innerHTML = "<button id=" + i + ">Verwijderen</button>";
 				let button = document.getElementById(i);
 				button.addEventListener('click', () => {
-					deleteData(id)
+					deleteData(id)					
 				});
 			}
 		}
@@ -63,5 +63,5 @@ function deleteData(item) {
 	return fetch('http://167.99.222.47:8000/api/shipments/' + item, {
 		method: 'delete'
 	})
-		.then(setTimeout(location.reload.bind(location), 500))
+		.then(setTimeout(location.reload.bind(location), 500))		
 }
