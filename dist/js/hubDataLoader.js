@@ -1,1 +1,0 @@
-let dataHub,packageZip=3011;fetch("https://bridge.buddyweb.fr/api/metrohubs/metrohaltes/"+packageZip).then(e=>e.json()).then(function(e){console.log(e),dataHub=e}).catch(e=>console.error(e));
