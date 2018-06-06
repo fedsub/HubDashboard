@@ -8,7 +8,7 @@ function doSomething() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var json = JSON.parse(xhr.responseText);
         }
-        
+
     };
     var data = JSON.stringify({     "name": fullname.value,
                                     "address": address.value,
@@ -16,5 +16,11 @@ function doSomething() {
                                     "zipNumbers": zipcode.value.replace(/\D/g,''),
                                     "phone": phone.value});
         xhr.send(data);
+        alert("The package has been added!");
+        location.reload();
+
+
         return false;
+
+
 }
