@@ -31,3 +31,7 @@ main {
 
 th {
   cursor: pointer; }
+
+#listScroll {
+  height: 50em;
+  overflow: scroll; }
