@@ -26,5 +26,8 @@ main {
 .brand-logo img {
   height: 64px; }
 
+.dropdown {
+  cursor: pointer; }
+
 th {
   cursor: pointer; }

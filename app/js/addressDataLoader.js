@@ -21,13 +21,17 @@ fetch("http://167.99.222.47:8000/api/shipments")
 			let cell5 = row.insertCell(4);
 			let cell6 = row.insertCell(5);
 			let cell7 = row.insertCell(6);
-			cell1.innerHTML = "<b>Naam</b>";
-			cell2.innerHTML = "<b>Adres</b>";
-			cell3.innerHTML = "<b>Postcode</b>";
-			cell4.innerHTML = "<b>Telefoonnummer</b>";
-			cell5.innerHTML = "<b>ID</b>";
-			cell6.innerHTML = "<b>Aanpassen</b>";
-			cell7.innerHTML = "<b>Verwijderen</b>";
+                // Auto sort the table by clicking the table headers
+                cell1.addEventListener("click", function(){sortTable(0)})
+                cell2.addEventListener("click", function(){sortTable(1)})
+                cell3.addEventListener("click", function(){sortTable(2)})
+                cell1.innerHTML = "<b class = dropdown>Naam</b><i class='tiny center material-icons dropdown'>arrow_drop_down</i>";
+                cell2.innerHTML = "<b class = dropdown>Adres</b><i class='tiny center material-icons dropdown'>arrow_drop_down</i>";
+                cell3.innerHTML = "<b class = dropdown>Postcode</b><i class='tiny center material-icons dropdown'>arrow_drop_down</i>";
+				cell4.innerHTML = "<b>Telefoonnummer</b>";
+				cell5.innerHTML = "<b>ID</b>";
+				cell6.innerHTML = "<b>Aanpassen</b>";
+				cell7.innerHTML = "<b>Verwijderen</b>";
 			
 			for (i = 0; i < dataAddress.length; i++) {
 				let row = table.insertRow(1);
