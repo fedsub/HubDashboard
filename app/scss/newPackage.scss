@@ -27,7 +27,7 @@ main {
 
 .page-footer {
   background-color: #5e35b1;
-}
+} 
 
 .brand-logo img {
   height: 64px;
@@ -42,6 +42,12 @@ th {
 }
 
 #listScroll {
-  height:20em;  
+  height:30em;  
   overflow:scroll;
+}
+
+#loader{
+  text-align: center;
+  vertical-align: middle;
+  // line-height: 450px;
 }
